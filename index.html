@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Momentum App</title>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+</head>
+
+<body>
+  <video autoplay muted loop id="backgroundVideo">
+    
+    <source src="day.mp4" type="video/mp4">
+    
+    <source src="night.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="overlay"></div>
+  <div class="main">
+    <span id="time">12:51:05 PM</span>
+    <div class="user-input">
+      <i class="fas fa-user"></i>
+      <form id="name-form">
+        <label for="name"></label>
+        <input type="text" id="name" name="name" required placeholder="What's your name?">
+  </form>
+</div>
+    <h1>
+        <span id ="greeting">Good Afternoon, </span>
+        <span id="name" contenteditable="true"> </span>
+    </h1>
+    <h2>
+      Your Focus For Today :</h2>
+    <h2 id="focus" contenteditable="true"></h2>
+  </div>
+
+  <div class="quote">
+    <h4 id="randomquotes">Quote Content</h4>
+    <div class="quote-input-container">
+      <i class="fas fa-pencil-alt"></i>
+    <input type="text" id="newQuoteInput" placeholder="Enter a new quote"> 
+    <button id="addQuoteButton"> <i class="fas fa-solid fa-plus"></i> </button>
+    <button id="deleteQuoteButton"> <i class="fa-solid fa-trash"></i> </button>
+    </div>
+  </div>
+
+    <button id="openTodoModal" class="btn">To-Do</button>
+<div id="todoModal" class="modal">
+  <div class="to-do-container">
+    <span class="close">&times;</span>
+    <h2>To-Do List</h2>
+    <form id="new-task-form-modal">
+      <input type="text" name="new-task-input" id="new-task-input-modal" placeholder="Add a task here!" />
+      <input type="submit" id="new-task-submit-modal" value="Add task" />
+    </form>
+    <div class="task-list">
+      <h2>Tasks</h2>
+      <div id="tasks-modal"></div>
+
+      	<!-- <div class="task">
+					<div class="content">
+						<input type="text" class="text" value="A new task" readonly>
+					</div>
+					<div class="actions">
+						<button class="edit">Edit</button>
+						<button class="delete">Delete</button>
+					</div>
+				</div> -->
+      
+    </div>
+  </div>
+</div>
+
+  <script src="script.js">  
+    
+    
+  </script>
+
+</body>
+
+</html>
